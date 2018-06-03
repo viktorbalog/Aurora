@@ -538,6 +538,9 @@ namespace Aurora.Settings
                         case PreferredKeyboardLocalization.dvorak_int:
                             culture = "dvorak_int";
                             break;
+                        case PreferredKeyboardLocalization.hu:
+                            culture = "hu-HU";
+                            break;
                     }
 
                     switch (culture)
@@ -604,6 +607,10 @@ namespace Aurora.Settings
                             _loaded_localization = PreferredKeyboardLocalization.dvorak_int;
                             LoadCulture("dvorak_int");
                             break;
+                        case ("hu-HU"):
+                            _loaded_localization = PreferredKeyboardLocalization.hu;
+                            LoadCulture("hu");
+                            break;
                         default:
                             _loaded_localization = PreferredKeyboardLocalization.intl;
                             LoadCulture("intl");
@@ -652,6 +659,8 @@ namespace Aurora.Settings
                     layoutConfigPath = Path.Combine(layoutsPath, "steelseries_apex_m750.json");
                 else if (keyboard_preference == PreferredKeyboard.SteelSeries_Apex_M750_TKL)
                     layoutConfigPath = Path.Combine(layoutsPath, "steelseries_apex_m750_tkl.json");
+                else if(keyboard_preference == PreferredKeyboard.Generic_105_Key)
+                    layoutConfigPath = Path.Combine(layoutsPath, "generic_105_key.json");
                 else
                 {
                     LoadNone();
@@ -735,6 +744,12 @@ namespace Aurora.Settings
                             break;
                         case PreferredMouse.Clevo_Touchpad:
                             mouse_feature_path = Path.Combine(layoutsPath, "Extra Features", "clevo_touchpad_features.json");
+                            break;
+                        case PreferredMouse.HP_OMEN_with_SteelSeries:
+                            mouse_feature_path = Path.Combine(layoutsPath, "Extra Features", "hp_omen_with_steelseries_features.json");
+                            break;
+                        case PreferredMouse.SteelSeries_Rival_400:
+                            mouse_feature_path = Path.Combine(layoutsPath, "Extra Features", "steelseries_rival_400_features.json");
                             break;
                     }
 

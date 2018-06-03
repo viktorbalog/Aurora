@@ -204,7 +204,10 @@ namespace Aurora.Settings
         [Description("SteelSeries Apex M750")]
         SteelSeries_Apex_M750 = 701,
         [Description("SteelSeries Apex M750 TKL")]
-        SteelSeries_Apex_M750_TKL = 702
+        SteelSeries_Apex_M750_TKL = 702,
+
+        [Description("Generic 105 Key Keyboard")]
+        Generic_105_Key = 800
     }
 
     public enum PreferredKeyboardLocalization
@@ -236,7 +239,9 @@ namespace Aurora.Settings
         [Description("DVORAK (US)")]
         dvorak = 12,
         [Description("DVORAK (INT)")]
-        dvorak_int = 13
+        dvorak_int = 13,
+        [Description("Hungarian")]
+        hu = 14
     }
 
     public enum PreferredMouse
@@ -263,13 +268,17 @@ namespace Aurora.Settings
 
         //Clevo range is 400-499
         [Description("Clevo - Touchpad")]
-        Clevo_Touchpad = 400
+        Clevo_Touchpad = 400,
 
         //Cooler Master range is 500-599
 
         //Roccat range is 600-699
 
         //Steelseries range is 700-799
+        [Description("SteelSeries - Rival 400")]
+        SteelSeries_Rival_400 = 700,
+        [Description("HP - Omen with SteelSeries")]
+        HP_OMEN_with_SteelSeries = 701
     }
 
     public enum KeycapType
